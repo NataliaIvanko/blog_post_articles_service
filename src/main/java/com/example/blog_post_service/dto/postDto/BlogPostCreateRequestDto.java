@@ -1,5 +1,6 @@
 package com.example.blog_post_service.dto.postDto;
 
+import com.example.blog_post_service.entity.Tag;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,10 +12,10 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 @Builder
-public class PostCreateRequestShortDto {
+public class BlogPostCreateRequestDto {
 
     private String title;
     private String body;
     private Long userId;
-    private List<Long> tagIds;
+    private List<Tag> tags;
 }

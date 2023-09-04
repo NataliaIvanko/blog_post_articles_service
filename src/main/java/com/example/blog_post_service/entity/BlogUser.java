@@ -5,6 +5,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.time.Instant;
+import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,7 +15,7 @@ import java.time.Instant;
 @Builder
 
 @Entity
-@Table(name = "blog_user")
+@Table(name = "blogUser")
 public class BlogUser {
 
     @Id
@@ -28,6 +29,9 @@ public class BlogUser {
     @Column (name = "last_name")
     private String lastName;
 
+    @Column(name = "username")
+    private String username;
+
     @Column (name = "account_status")
     private AccountStatus accountStatus;
 
@@ -39,5 +43,10 @@ public class BlogUser {
 
     @Column(name = "created_on")
     private Instant createdOn;
+
+
+
+//    @Column(name = "roles")
+//    private Set<String>/Role roles;
 
 }

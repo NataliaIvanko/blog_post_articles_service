@@ -1,11 +1,11 @@
 package com.example.blog_post_service.entity;
 
-import com.example.blog_post_service.entity.status.PostStatus;
+import com.example.blog_post_service.entity.status.BlogPostStatus;
+//import jakarta.persistence.*;
 import lombok.*;
-
 import javax.persistence.*;
 import java.time.Instant;
-import java.util.Set;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,7 +19,7 @@ import java.util.Set;
 public class BlogPost {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
@@ -30,7 +30,7 @@ public class BlogPost {
     private String body;
 
     @Column(name = "post_status")
-    private PostStatus postStatus;
+    private BlogPostStatus blogPostStatus;
 
     @Column(name = "created_on")
     private Instant createdOn;
@@ -39,7 +39,7 @@ public class BlogPost {
     private Instant updatedOn;
 
     @ManyToOne
-    @JoinColumn(name = "author", referencedColumnName = "id")
+    @JoinColumn(name = "author_id", referencedColumnName = "id")
     private BlogUser author;
 
     @ManyToMany
@@ -48,5 +48,5 @@ public class BlogPost {
                 @JoinColumn(name = "blog_post_id", referencedColumnName = "id")},
             inverseJoinColumns = {
             @JoinColumn(name = "tag_ig", referencedColumnName = "id")})
-    private Set<Tag> tags;
+    private List<Tag> tags;
 }

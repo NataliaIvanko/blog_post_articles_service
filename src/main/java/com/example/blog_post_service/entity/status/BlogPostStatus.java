@@ -1,6 +1,6 @@
 package com.example.blog_post_service.entity.status;
 
-public enum PostStatus {
+public enum BlogPostStatus {
     PUBLISHED,
     UNPUBLISHED,
     BLOCKED

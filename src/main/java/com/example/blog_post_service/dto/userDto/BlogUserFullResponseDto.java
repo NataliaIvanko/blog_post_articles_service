@@ -1,6 +1,6 @@
 package com.example.blog_post_service.dto.userDto;
 
-import com.example.blog_post_service.dto.postDto.PostResponseShortDto;
+import com.example.blog_post_service.dto.postDto.BlogPostResponseShortDto;
 import lombok.*;
 
 import java.util.List;
@@ -18,5 +18,5 @@ public class BlogUserFullResponseDto {
     private String firstname;
     private String lastName;
     private String userName;
-    private List<PostResponseShortDto>posts;
+    private List<BlogPostResponseShortDto>posts;
 }

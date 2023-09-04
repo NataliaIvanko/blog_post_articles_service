@@ -20,6 +20,6 @@ public class Tag {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "text")
-    private String text;
+    @Column(name = "name")
+    private String name;
 }
