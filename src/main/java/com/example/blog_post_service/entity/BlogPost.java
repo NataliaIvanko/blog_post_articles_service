@@ -39,8 +39,8 @@ public class BlogPost {
     private Instant updatedOn;
 
     @ManyToOne
-    @JoinColumn(name = "author_id", referencedColumnName = "id")
-    private BlogUser author;
+    @JoinColumn(name = "blog_user_id", referencedColumnName = "id")
+    private BlogUser blogUser;
 
     @ManyToMany
     @JoinTable(name = "post_tags",

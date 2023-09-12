@@ -15,7 +15,7 @@ import java.util.Set;
 @Builder
 
 @Entity
-@Table(name = "blogUser")
+@Table(name = "bloguser")
 public class BlogUser {
 
     @Id
